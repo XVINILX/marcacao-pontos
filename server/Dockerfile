@@ -16,8 +16,7 @@ RUN yarn install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Copy .env file to the working directory
-COPY .env ./
+
 
 # Install PostgreSQL client
 RUN apt-get update && apt-get install -y postgresql-client
