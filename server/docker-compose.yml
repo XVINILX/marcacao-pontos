@@ -6,7 +6,7 @@ services:
     ports:
       - "${PORT}:${PORT}"
     environment:
-      NODE_ENV: "${NODE_ENV}"
+      NODE_ENV: "${NODE_ENV_VAR}"
       POSTGRES_USER: "${DB_USERNAME}"
       POSTGRES_PASSWORD: "${DB_PASS}"
       POSTGRES_DB: "${DB_NAME}"
