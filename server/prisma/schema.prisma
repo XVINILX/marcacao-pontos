@@ -1,0 +1,41 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+enum UserType {
+    admin
+    employee
+}
+
+model User {
+    id                  String   @id @default(uuid())
+    name                String
+    loginIdentification String?
+    email               String   @unique
+    password            String
+    cellphone           String
+    userType            UserType
+
+    MarcacaoPontos MarcacaoPontos[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model MarcacaoPontos {
+    id String @id @default(uuid())
+
+    initialTime DateTime
+    finalTime   DateTime?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    userId String
+    user   User   @relation(fields: [userId], references: [id])
+}

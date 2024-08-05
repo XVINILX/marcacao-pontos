@@ -1,0 +1,39 @@
+.accordion-item {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.accordion-button {
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button.rotate {
+  transform: rotate(-90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+}
+
+.accordion-content.open {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.accordion-content p {
+  margin: 10px 0;
+}

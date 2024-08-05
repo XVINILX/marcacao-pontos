@@ -1,0 +1,17 @@
+// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TypeScript",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/dist/server.js", // Ensure this points to the compiled JavaScript
+      "preLaunchTask": "tsc: build - tsconfig.json", // Ensures TypeScript is built before running
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"], // Adjust to your output directory
+      "runtimeArgs": ["--nolazy"],
+      "sourceMaps": true
+    }
+  ]
+}
