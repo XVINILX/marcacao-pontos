@@ -9,6 +9,8 @@ Repositório (back e front)
 git clone https://github.com/XVINILX/marcacao-pontos/
 
 ## BACK
+Repositório back:
+- https://github.com/XVINILX/marcacao-pontos
 Stacks:
 - Node;
 
@@ -30,6 +32,9 @@ email: "superadmin@teste.com",
 password: "Teste@123",
 
 ## FRONT
+Repositório front:
+- https://github.com/XVINILX/front-marcacao-pontos
+
 Stacks:
 - React
 
