@@ -23,7 +23,7 @@ COPY .env ./
 RUN apt-get update && apt-get install -y postgresql-client
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE 8000
 
 # Define environment variable for production
 ENV NODE_ENV=production
