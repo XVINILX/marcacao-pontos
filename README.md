@@ -26,7 +26,7 @@ Deploy:
 Rodando back:
 docker-compose up --build
 Pode usar o env em .env.example;
-Back pode ser encontrado em: https://18.231.127.205/
+Back pode ser encontrado em: https://15.229.156.2/
 
 Ao rodar o back, um usuário admin e "empregado" será criado quando a variável NODE_ENV for "DEV"
 O Admin terá o login:
@@ -55,7 +55,7 @@ yarn start
 .env
 
 .env deve ter a variável de ambiente:
-REACT_APP_API_URL=https://18.231.127.205/
+REACT_APP_API_URL=https://15.229.156.2/
 ou apontando para servidor local;
 URL 
 https://king-prawn-app-yq9ia.ondigitalocean.app/
