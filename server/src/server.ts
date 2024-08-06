@@ -46,6 +46,14 @@ const requestListener = async (
     await marcacaoPontosRoutes(req, res);
   } else if (req.url?.startsWith("/auth")) {
     await authRoutes(req, res);
+  } else if (req.url === "/") {
+    res.statusCode = 201;
+    res.end(
+      JSON.stringify({
+        message:
+          "Welcome to the Marcação de Pontos API, a AWS study for EC2 instances",
+      })
+    );
   } else {
     res.statusCode = 404;
     res.end(JSON.stringify({ message: "Not Found" }));
